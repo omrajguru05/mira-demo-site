@@ -1,0 +1,44 @@
+<!-- @dsCard height=320 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Geist:wght@100..900&display=swap">
+<style>
+  html, body { margin: 0; background: var(--surface-0); }
+  .cover { position: relative; width: 960px; height: 320px; overflow: hidden; background: var(--surface-0); color: var(--ink); }
+  .cover svg { position: absolute; inset: 0; }
+  .k { fill: var(--cobalt); }
+  .e { fill: var(--ember); }
+  .s { fill: var(--sun); }
+  .h { fill: var(--haze); }
+  .o { fill: var(--ocean); }
+  .g { fill: var(--surface-0); }
+  .r-lg { rx: var(--radius-lg); }
+  .r-xl { rx: var(--radius-xl); }
+  .r-px { rx: var(--radius-px); }
+  .name { position: absolute; left: 32px; bottom: 72px; margin: 0; font: 500 120px/0.92 var(--font-display); letter-spacing: -0.045em; }
+  .tag { position: absolute; left: 32px; bottom: 32px; margin: 0; max-width: 440px; font: 400 14px/1.4 var(--font-text); color: var(--ink-muted); }
+</style>
+<!--
+  blocks: cobalt 272x248 slab bleeding off the top, ember 200x160, sun 128x96, haze 112x96, ocean disc r64, on a 16 grid in space-4 steps.
+  arrangement: a tall slab with satellites, all right of x=480, the name and tagline left on the ground.
+  pattern: the oversized pixel M of the logo, 32px squares at a 36px pitch, cut out of the cobalt slab in the ground color. The M is the one display glyph, clipped by its block.
+  steps and radii: gaps of 16 (space-4), slab and small blocks radius-lg, ember radius-xl, pixels radius-px, ocean disc at half its width.
+-->
+<div class="cover">
+  <svg viewBox="0 0 960 320" width="960" height="320" aria-hidden="true">
+    <rect class="k r-lg" x="496" y="-24" width="272" height="248"/>
+    <g class="g">
+      <rect class="r-px" x="544" y="24" width="32" height="32"/><rect class="r-px" x="688" y="24" width="32" height="32"/>
+      <rect class="r-px" x="544" y="60" width="32" height="32"/><rect class="r-px" x="580" y="60" width="32" height="32"/><rect class="r-px" x="652" y="60" width="32" height="32"/><rect class="r-px" x="688" y="60" width="32" height="32"/>
+      <rect class="r-px" x="544" y="96" width="32" height="32"/><rect class="r-px" x="616" y="96" width="32" height="32"/><rect class="r-px" x="688" y="96" width="32" height="32"/>
+      <rect class="r-px" x="544" y="132" width="32" height="32"/><rect class="r-px" x="688" y="132" width="32" height="32"/>
+      <rect class="r-px" x="544" y="168" width="32" height="32"/><rect class="r-px" x="688" y="168" width="32" height="32"/>
+    </g>
+    <rect class="e r-xl" x="784" y="32" width="200" height="160"/>
+    <rect class="s r-lg" x="496" y="240" width="128" height="96"/>
+    <rect class="h r-lg" x="640" y="240" width="112" height="96"/>
+    <circle class="o" cx="848" cy="272" r="64"/>
+  </svg>
+  <h1 class="name">Mira</h1>
+  <p class="tag">Design led. Brutally fast. Agent ready.</p>
+</div>

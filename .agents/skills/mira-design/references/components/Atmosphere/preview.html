@@ -1,0 +1,18 @@
+<!-- @dsCard group="Atmosphere" height=400 subtitle="Sunset, sky, cobalt and meadow fields with film grain" -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&family=Pixelify+Sans:wght@400..700&display=swap">
+<style>
+  body { margin: 0; padding: 24px; background: var(--surface-0); color: var(--ink); font: 400 15px/1.5 var(--font-text); }
+  .grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+  .lab { font: 500 12px/1.4 var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; }
+</style>
+<div id="root"></div>
+<script>
+  var M = window.Mira;
+  var names = { sunset: 'Sunset', sky: 'Sky', cobalt: 'Cobalt', meadow: 'Meadow' };
+  document.getElementById('root').innerHTML =
+    '<div class="grid">' + Object.keys(names).map(function (p) {
+      return M.Atmosphere({ palette: p, height: 340, content: '<span class="lab">' + names[p] + '</span>' });
+    }).join('') + '</div>';
+</script>

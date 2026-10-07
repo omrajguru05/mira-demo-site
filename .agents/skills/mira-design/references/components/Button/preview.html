@@ -1,0 +1,15 @@
+<!-- @dsCard group="Actions" height=170 subtitle="Solid, outline and accent in two sizes" -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&family=Pixelify+Sans:wght@400..700&display=swap">
+<style>
+  body { margin: 0; padding: 24px; background: var(--surface-0); color: var(--ink); font: 400 15px/1.5 var(--font-text); }
+  .row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 14px; }
+</style>
+<div id="root"></div>
+<script>
+  var M = window.Mira;
+  document.getElementById('root').innerHTML =
+    '<div class="row">' + M.Button({ label: 'Start building' }) + M.Button({ label: 'Read the docs', variant: 'outline' }) + M.Button({ label: 'Copy command', variant: 'accent' }) + '</div>' +
+    '<div class="row">' + M.Button({ label: 'Start building', size: 'sm' }) + M.Button({ label: 'Read the docs', variant: 'outline', size: 'sm' }) + M.Button({ label: 'Unavailable', variant: 'outline', disabled: true }) + '</div>';
+</script>

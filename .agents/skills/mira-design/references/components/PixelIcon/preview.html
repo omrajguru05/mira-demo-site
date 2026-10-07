@@ -1,0 +1,19 @@
+<!-- @dsCard group="Icons" height=340 subtitle="A lit glyph over a dim 12 by 12 pixel grid" -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&family=Pixelify+Sans:wght@400..700&display=swap">
+<style>
+  body { margin: 0; padding: 28px; background: var(--surface-0); color: var(--ink); font: 400 15px/1.5 var(--font-text); }
+  .grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 24px 16px; margin-bottom: 28px; }
+  .cell { display: grid; gap: 10px; justify-items: start; }
+  .cell span { font: 500 11px/1 var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-faint); }
+  .sizes { display: flex; align-items: flex-end; gap: 20px; }
+</style>
+<div id="root"></div>
+<script>
+  var M = window.Mira;
+  var list = [['morph', 'ember'], ['content', 'sun'], ['check', 'lime'], ['search', 'haze'], ['shield', 'lagoon'], ['alert', 'rose'], ['bars', 'lilac'], ['bolt', 'peach'], ['globe', 'haze'], ['pin', 'ember'], ['lock', 'sun'], ['arrow', 'ink']];
+  document.getElementById('root').innerHTML =
+    '<div class="grid">' + list.map(function (i) { return '<div class="cell">' + M.PixelIcon({ name: i[0], tone: i[1], size: 56 }) + '<span>' + i[0] + '</span></div>'; }).join('') + '</div>' +
+    '<div class="sizes">' + [24, 32, 40, 56, 72].map(function (s) { return M.PixelIcon({ name: 'morph', tone: 'ember', size: s }); }).join('') + '</div>';
+</script>

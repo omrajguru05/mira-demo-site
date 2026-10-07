@@ -1,0 +1,264 @@
+<template>
+<article class="post-article">
+  <nav class="back-bar" aria-label="Breadcrumb">
+    <a class="mira-btn back-btn" data-variant="outline" data-size="sm" href="/">
+      <span aria-hidden="true">&larr;</span>
+      <span>Field Notes</span>
+    </a>
+  </nav>
+
+  <header class="post-header">
+    <div class="mira-eyebrow">
+      <span>{{ entry.date }}</span>
+      <span>&middot;</span>
+      <span>{{ entry.reading_time }} min read</span>
+    </div>
+
+    <h1 class="post-title" mira-morph="post-{{ entry.slug }}">{{ entry.title }}</h1>
+
+    {#if entry.description}
+      <p class="post-lead">{{ entry.description }}</p>
+    {/if}
+
+    {#if entry.tags}
+      <div class="tag-row" aria-label="Post tags">
+        {#each entry.tags as tag}
+          <span class="mira-chip">{{ tag }}</span>
+        {/each}
+      </div>
+    {/if}
+  </header>
+
+  {#if entry.toc}
+    <aside class="post-toc-wrap">
+      <div class="mira-box">
+        <i></i><i></i><i></i><i></i>
+        <div class="toc-inner">
+          <span class="toc-label">Outline</span>
+          <ol class="toc-list">
+            {#each entry.toc as heading}
+              <li class="toc-item toc-level-{{ heading.level }}">
+                <a href="#{{ heading.id }}">{{ heading.text }}</a>
+              </li>
+            {/each}
+          </ol>
+        </div>
+      </div>
+    </aside>
+  {/if}
+
+  <div class="prose post-body">
+    <slot />
+  </div>
+
+  <section class="also-read-section" aria-label="Also read on">
+    <div class="mira-box">
+      <i></i><i></i><i></i><i></i>
+      <div class="also-read-header">
+        <span class="mira-eyebrow">Also read</span>
+      </div>
+      <div class="mira-cells also-read-cells">
+        {#if entry.prev}
+          <a class="also-read-card" href="{{ entry.prev.url }}">
+            <span class="card-direction">&larr; Previous</span>
+            <span class="card-title">{{ entry.prev.title }}</span>
+          </a>
+        {/if}
+        {#if entry.next}
+          <a class="also-read-card" href="{{ entry.next.url }}">
+            <span class="card-direction">Next &rarr;</span>
+            <span class="card-title">{{ entry.next.title }}</span>
+          </a>
+        {/if}
+      </div>
+    </div>
+  </section>
+</article>
+</template>
+
+<style>
+.post-article {
+  display: flex;
+  flex-direction: column;
+}
+
+.back-bar {
+  margin-bottom: var(--space-6);
+}
+
+.back-btn {
+  font-family: var(--font-mono);
+}
+
+.post-header {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: var(--space-6);
+  margin-bottom: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.post-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+  color: var(--ink);
+  margin: 0;
+  text-wrap: balance;
+}
+
+.post-lead {
+  font-family: var(--font-text);
+  font-size: 1.125rem;
+  line-height: 1.55;
+  color: var(--ink-muted);
+  margin: 0;
+  text-wrap: pretty;
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-1);
+}
+
+.post-toc-wrap {
+  margin-bottom: var(--space-8);
+}
+
+.toc-inner {
+  padding: var(--space-6);
+  background: var(--surface-1);
+}
+
+.toc-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-faint);
+  margin-bottom: var(--space-3);
+}
+
+.toc-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.toc-item a {
+  color: var(--ink-muted);
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.15s ease;
+  display: inline-block;
+  min-height: 24px;
+}
+
+.toc-item a:hover {
+  color: var(--ink);
+}
+
+.toc-level-3 {
+  padding-left: var(--space-4);
+}
+
+.post-body {
+  line-height: 1.7;
+  color: var(--ink);
+  margin-bottom: var(--space-12);
+  max-width: 68ch;
+}
+
+.post-body h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  scroll-margin-top: 6rem;
+}
+
+.post-body p {
+  margin-bottom: 1.25rem;
+  color: var(--ink);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+
+.post-body pre {
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: var(--space-4) var(--space-6);
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin-block: 1.75rem;
+}
+
+.post-body code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+
+.also-read-section {
+  margin-top: var(--space-4);
+}
+
+.also-read-header {
+  padding: var(--space-4) var(--space-6);
+  border-bottom: 1px solid var(--line);
+  background: var(--surface-1);
+}
+
+.also-read-cells {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.also-read-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface-1);
+  padding: var(--space-6);
+  text-decoration: none;
+  min-height: 44px;
+  transition: background 0.15s ease;
+}
+
+.also-read-card:hover {
+  background: var(--surface-2);
+}
+
+.also-read-card:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.card-direction {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-faint);
+  margin-bottom: var(--space-2);
+}
+
+.card-title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  line-height: 1.4;
+}
+</style>

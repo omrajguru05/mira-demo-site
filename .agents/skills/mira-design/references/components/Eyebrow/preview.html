@@ -1,0 +1,14 @@
+<!-- @dsCard group="Type" height=132 subtitle="Mono uppercase labels with a middle dot" -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&family=Pixelify+Sans:wght@400..700&display=swap">
+<style>
+  body { margin: 0; padding: 24px; background: var(--surface-0); color: var(--ink); font: 400 15px/1.5 var(--font-text); }
+  .stack { display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
+</style>
+<div id="root"></div>
+<script>
+  var M = window.Mira;
+  document.getElementById('root').innerHTML =
+    '<div class="stack">' + M.Eyebrow({ items: ['Company', 'Brand'] }) + M.Eyebrow({ items: ['Docs', 'Guide', 'v1.0'] }) + M.Eyebrow({ items: ['Fig 01', 'Sunset atmosphere'] }) + '</div>';
+</script>

@@ -1,0 +1,15 @@
+<!-- @dsCard group="Actions" height=120 subtitle="Rounded pills for commands and tags" -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&family=Pixelify+Sans:wght@400..700&display=swap">
+<style>
+  body { margin: 0; padding: 24px; background: var(--surface-0); color: var(--ink); font: 400 15px/1.5 var(--font-text); }
+  .row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+</style>
+<div id="root"></div>
+<script>
+  var M = window.Mira;
+  document.getElementById('root').innerHTML = '<div class="row">' +
+    ['mira-morph', 'collections', 'mira build', '<mira-search>', 'sha256', 'Speculation Rules'].map(function (l) { return M.Chip({ label: l }); }).join('') +
+    M.Chip({ label: 'Closed beta', mono: false }) + '</div>';
+</script>

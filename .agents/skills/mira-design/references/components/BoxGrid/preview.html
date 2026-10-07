@@ -1,0 +1,21 @@
+<!-- @dsCard group="Layout" height=760 subtitle="A framed grid of cells, each led by a pixel icon" -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&family=Pixelify+Sans:wght@400..700&display=swap">
+<style>
+  body { margin: 0; background: var(--surface-0); color: var(--ink); font: 400 15px/1.5 var(--font-text); }
+</style>
+<div id="root"></div>
+<script>
+  var M = window.Mira;
+  document.getElementById('root').innerHTML = M.BoxGrid({ rails: true, columns: 4, cells: [
+    { icon: 'morph', tone: 'ember', title: 'Native page transitions', body: 'Shared elements morph between pages with one attribute. Back plays the motion in reverse.', chips: ['mira-morph'] },
+    { icon: 'content', tone: 'sun', title: 'Typed content', body: 'Frontmatter is checked against a schema and fails with the exact file and line.', chips: ['collections'] },
+    { icon: 'check', tone: 'lime', title: 'Checks before deploy', body: 'Broken links, missing assets and duplicate URLs stop the build, and the reader stays safe.', chips: ['mira build'] },
+    { icon: 'search', tone: 'haze', title: 'Built in search', body: 'A build time index and a search box that loads only on pages that use it.', chips: ['<mira-search>'] },
+    { icon: 'shield', tone: 'lagoon', title: 'Strict security policy', body: 'Every page carries a content security policy built from hashes of its own code.', chips: ['sha256'] },
+    { icon: 'alert', tone: 'rose', title: 'Errors you can read', body: 'Build and runtime errors open on the page with the source line and a copy button.', chips: ['mira dev'] },
+    { icon: 'bars', tone: 'lilac', title: 'Size budgets', body: 'A page over its size budget fails the build. The runtime is 938 bytes gzipped.', chips: ['page_kb'] },
+    { icon: 'bolt', tone: 'peach', title: 'Instant navigation', body: 'Links prefetch on hover and prerender on press, so the next page is ready first.', chips: ['Speculation Rules'] }
+  ] });
+</script>

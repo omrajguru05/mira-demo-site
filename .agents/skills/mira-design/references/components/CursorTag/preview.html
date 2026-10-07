@@ -1,0 +1,16 @@
+<!-- @dsCard group="Selection" height=130 subtitle="Pointers with collaborator name tags" -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&family=Pixelify+Sans:wght@400..700&display=swap">
+<style>
+  body { margin: 0; padding: 24px; background: var(--surface-0); color: var(--ink); font: 400 15px/1.5 var(--font-text); }
+  .row { display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start; }
+</style>
+<div id="root"></div>
+<script>
+  var M = window.Mira;
+  document.getElementById('root').innerHTML =
+    '<div class="row">' + [['Zach', 'cobalt'], ['Lisa', 'ember'], ['Manon', 'lagoon'], ['Jimmy', 'sun'], ['Rhea', 'rose']].map(function (p) {
+      return M.CursorTag({ name: p[0], tone: p[1] });
+    }).join('') + '</div>';
+</script>

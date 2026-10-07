@@ -1,0 +1,74 @@
+{
+  "site": {
+    "title": "Mira",
+    "description": "Design led. Brutally fast. Agent ready. Static web framework with zero client hydration.",
+    "url": "https://mira.omrajguru.site",
+    "lang": "en",
+    "theme_color": "#0b0b0d",
+    "image": "/og.png",
+    "image_alt": "Mira: Design led static web framework.",
+    "twitter": "@notomrajguru",
+    "same_as": [
+      "https://mira.omrajguru.site",
+      "https://github.com/omrajguru05"
+    ]
+  },
+  "scheme": "dark",
+  "transitions": {
+    "default": "fade",
+    "pairs": {
+      "/ -> /posts/*": "slide-up"
+    }
+  },
+  "prefetch": {
+    "eagerness": "moderate",
+    "prerender": true
+  },
+  "theme": {
+    "ember": "#f4561e"
+  },
+  "fonts": [
+    {
+      "family": "Bricolage Grotesque",
+      "src": "/fonts/BricolageGrotesque.woff2",
+      "weight": "200 800",
+      "preload": true
+    },
+    {
+      "family": "Geist",
+      "src": "/fonts/Geist.woff2",
+      "weight": "100 900",
+      "preload": true
+    },
+    {
+      "family": "Geist Mono",
+      "src": "/fonts/GeistMono.woff2",
+      "weight": "100 900"
+    },
+    {
+      "family": "Pixelify Sans",
+      "src": "/fonts/PixelifySans.woff2",
+      "weight": "400 700"
+    }
+  ],
+  "collections": {
+    "posts": {
+      "strict": true,
+      "fields": {
+        "title": "string",
+        "description": "string?",
+        "date": "date",
+        "tags": "string[]?"
+      }
+    }
+  },
+  "agents": {
+    "twins": true,
+    "search": "allow",
+    "answers": "allow",
+    "training": "disallow"
+  },
+  "headers": {
+    "emit": true
+  }
+}

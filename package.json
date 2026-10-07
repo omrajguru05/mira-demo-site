@@ -1,0 +1,11 @@
+{
+  "name": "mira-demo-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Editorial demonstration publication for the Mira static web framework",
+  "scripts": {
+    "dev": "mira dev",
+    "build": "mira build",
+    "build:json": "mira build --json"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "v": 3,
+  "layout": "files",
+  "createdOnFiles": { "v": 1, "at": "2026-10-07T09:58:00Z" },
+  "title": "Mira Design Language",
+  "namespace": "Mira",
+  "libraries": [],
+  "sections": {},
+  "groups": ["Logos"],
+  "assetGroups": {
+    "Logos": {
+      "name": "Logos",
+      "tile": "m",
+      "order": ["mira-mark-dark.svg", "mira-mark-light.svg"],
+      "files": {
+        "mira-mark-dark.svg": { "name": "mira-mark-dark.svg", "blob": "0f23eeb2e757f4d72650c15afda96d9c", "size": 984, "type": "image/svg+xml" },
+        "mira-mark-light.svg": { "name": "mira-mark-light.svg", "blob": "9efe6269b7467c219cf36f9f1b33f3eb", "size": 1030, "type": "image/svg+xml" }
+      }
+    }
+  },
+  "blobs": {},
+  "docs": { "readme": "project/README.md", "sections": [] },
+  "lastChange": { "by": "Om", "at": "2026-10-07T09:58:00Z", "via": "Claude", "note": "Boxed layout (Box, BoxGrid), pixel icons (PixelIcon), Chip, and pill shaped controls" }
+}

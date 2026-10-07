@@ -1,0 +1,16 @@
+<!-- @dsCard group="Selection" height=250 subtitle="One key word on a block with square handles" -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&family=Pixelify+Sans:wght@400..700&display=swap">
+<style>
+  body { margin: 0; padding: 32px 28px; background: var(--surface-0); color: var(--ink); font: 400 15px/1.5 var(--font-text); }
+  h1 { margin: 0 0 32px; font: 500 56px/1.18 var(--font-display); letter-spacing: -0.035em; text-wrap: balance; }
+  .tones { display: flex; flex-wrap: wrap; gap: 28px; font: 500 28px/1.2 var(--font-display); letter-spacing: -0.02em; }
+</style>
+<div id="root"></div>
+<script>
+  var M = window.Mira;
+  document.getElementById('root').innerHTML =
+    '<h1>Fast by default. Beautiful on ' + M.Highlight({ text: 'arrival.' }) + '</h1>' +
+    '<div class="tones">' + ['sun', 'ember', 'lime', 'haze', 'cobalt'].map(function (t) { return M.Highlight({ text: t, tone: t }); }).join('') + '</div>';
+</script>

@@ -1,0 +1,18 @@
+<!-- @dsCard group="Layout" height=450 subtitle="Hairline frame, square corners, four handles and dotted rails" -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&family=Pixelify+Sans:wght@400..700&display=swap">
+<style>
+  body { margin: 0; background: var(--surface-0); color: var(--ink); font: 400 15px/1.5 var(--font-text); }
+  h2 { margin: 16px 0 12px; font: 500 56px/1 var(--font-display); letter-spacing: -0.035em; text-wrap: balance; max-width: 14ch; }
+  p { margin: 0 0 24px; max-width: 46ch; color: var(--ink-muted); font-size: 18px; }
+  .row { display: flex; flex-wrap: wrap; gap: 12px; }
+</style>
+<div id="root"></div>
+<script>
+  var M = window.Mira;
+  document.getElementById('root').innerHTML = M.Box({ rails: true, content:
+    '<div class="mira-box__body">' + M.Eyebrow({ items: ['Boxed layout', 'Frame'] }) +
+    '<h2>Sections live in frames.</h2><p>Hairlines mark the edges, handles mark the corners and dots fill the margin.</p>' +
+    '<div class="row">' + M.Button({ label: 'Start building' }) + M.Button({ label: 'Read the docs', variant: 'outline' }) + '</div></div>' });
+</script>
