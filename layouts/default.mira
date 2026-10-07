@@ -6,7 +6,6 @@
     <a href="/" class="mira-brand" mira-morph="brand-logo" aria-label="Mira Home">
       <img src="/mira-mark-dark.svg" alt="Mira" width="30" height="30" class="mira-brand__mark" />
       <span class="mira-brand__title">Mira</span>
-      <span class="mira-brand__preview">Preview</span>
     </a>
 
     <nav class="mira-nav" aria-label="Primary">
@@ -31,7 +30,6 @@
       <a href="https://mira.omrajguru.site" target="_blank" rel="noopener noreferrer" class="mira-footer__identity" aria-label="Mira official site">
         <img src="/mira-mark-dark.svg" alt="Mira" width="22" height="22" class="mira-footer__mark" />
         <span class="mira-footer__title">Mira</span>
-        <span class="mira-footer__preview-badge">Demo</span>
       </a>
       <p class="mira-footer__tag">Living editorial preview for the zero-hydration web framework launching at mira.omrajguru.site.</p>
     </div>
@@ -545,22 +543,6 @@ mira-search mark {
   white-space: nowrap;
 }
 .mira-chip[data-mono="false"] { font-family: var(--font-text); }
-
-/* Brand & Footer Preview Badges */
-.mira-brand__preview,
-.mira-footer__preview-badge {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  padding: 2px 7px;
-  border-radius: var(--radius-pill);
-  background: var(--surface-2);
-  border: 1px solid var(--line);
-  color: var(--ink-faint);
-  line-height: 1.2;
-}
 
 /* Pixel icon */
 .mira-pxi {

@@ -8,9 +8,9 @@
   </nav>
 
   <header class="post-header">
-    <div class="mira-eyebrow">
-      <span>{{ entry.date }}</span>
-      <span>&middot;</span>
+    <div class="post-meta">
+      <time datetime="{{ entry.date }}">{{ entry.date }}</time>
+      <span class="meta-dot">&middot;</span>
       <span>{{ entry.reading_time }} min read</span>
     </div>
 
@@ -19,22 +19,13 @@
     {#if entry.description}
       <p class="post-lead">{{ entry.description }}</p>
     {/if}
-
-    {#if entry.tags}
-      <div class="tag-row" aria-label="Post tags">
-        {#each entry.tags as tag}
-          <span class="mira-chip">{{ tag }}</span>
-        {/each}
-      </div>
-    {/if}
   </header>
 
   {#if entry.toc}
-    <aside class="post-toc-wrap">
+    <aside class="post-toc-wrap" aria-label="Table of contents">
       <div class="mira-box">
         <i></i><i></i><i></i><i></i>
         <div class="toc-inner">
-          <span class="toc-label">Outline</span>
           <ol class="toc-list">
             {#each entry.toc as heading}
               <li class="toc-item toc-level-{{ heading.level }}">
@@ -51,22 +42,22 @@
     <slot />
   </div>
 
-  <section class="also-read-section" aria-label="Also read on">
+  <section class="also-read-section" aria-label="Further Reading">
     <div class="mira-box">
       <i></i><i></i><i></i><i></i>
       <div class="also-read-header">
-        <span class="mira-eyebrow">Also read</span>
+        <h2 class="box-heading">Further Reading</h2>
       </div>
       <div class="mira-cells also-read-cells">
         {#if entry.prev}
           <a class="also-read-card" href="{{ entry.prev.url }}">
-            <span class="card-direction">&larr; Previous</span>
+            <span class="card-direction">&larr; Previous study</span>
             <span class="card-title">{{ entry.prev.title }}</span>
           </a>
         {/if}
         {#if entry.next}
           <a class="also-read-card" href="{{ entry.next.url }}">
-            <span class="card-direction">Next &rarr;</span>
+            <span class="card-direction">Next study &rarr;</span>
             <span class="card-title">{{ entry.next.title }}</span>
           </a>
         {/if}
@@ -99,6 +90,20 @@
   gap: var(--space-3);
 }
 
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--ink-faint);
+  letter-spacing: 0.02em;
+}
+
+.meta-dot {
+  color: var(--line-strong);
+}
+
 .post-title {
   font-family: var(--font-display);
   font-size: clamp(2rem, 5vw, 2.75rem);
@@ -119,13 +124,6 @@
   text-wrap: pretty;
 }
 
-.tag-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2);
-  margin-top: var(--space-1);
-}
-
 .post-toc-wrap {
   margin-bottom: var(--space-8);
 }
@@ -133,16 +131,6 @@
 .toc-inner {
   padding: var(--space-6);
   background: var(--surface-1);
-}
-
-.toc-label {
-  display: block;
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--ink-faint);
-  margin-bottom: var(--space-3);
 }
 
 .toc-list {
@@ -221,6 +209,15 @@
   padding: var(--space-4) var(--space-6);
   border-bottom: 1px solid var(--line);
   background: var(--surface-1);
+}
+
+.box-heading {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin: 0;
 }
 
 .also-read-cells {

@@ -1,5 +1,5 @@
 ---
-title: "Mira · Field Notes & Preview"
+title: "Mira"
 description: "An editorial exploration of canopy geometry, fluvial hydrology, and alpine stratigraphy. Built with Mira, the zero-hydration static web framework."
 ---
 <template>
@@ -8,11 +8,6 @@ description: "An editorial exploration of canopy geometry, fluvial hydrology, an
     <div class="mira-atmo__field"></div>
     <div class="mira-atmo__orb"></div>
     <div class="mira-atmo__body">
-      <div class="hero-top-meta">
-        <span class="mira-eyebrow">FIELD OBSERVATIONS &middot; NATURAL GEOMETRY</span>
-        <span class="preview-badge">Demo Publication &middot; Mira Preview</span>
-      </div>
-
       <h1 class="hero-title">
         Natural systems observed through <span class="mira-hl" data-tone="sun">structure<i></i><i></i><i></i><i></i></span> and physics.
       </h1>
@@ -28,26 +23,16 @@ description: "An editorial exploration of canopy geometry, fluvial hydrology, an
         <a href="/about/" class="mira-btn" data-variant="outline">
           About Framework &rarr;
         </a>
-        <a href="https://mira.omrajguru.site" target="_blank" rel="noopener noreferrer" class="mira-chip external-chip">
-          <span>mira.omrajguru.site &middot; Coming Soon &nearr;</span>
-        </a>
       </div>
     </div>
   </div>
 </section>
 
-<section id="notes" class="mira-section" aria-label="Field Notes Archive">
+<section id="notes" class="mira-section" aria-label="Field Notes">
   <div class="mira-box">
     <i></i><i></i><i></i><i></i>
     <div class="mira-box__header">
-      <div class="header-split">
-        <div class="mira-eyebrow">
-          <span>Field Notes Collection</span>
-          <span>&middot;</span>
-          <span>{{ collections.posts.length }} Studies</span>
-        </div>
-        <span class="collection-note">Compiled statically with native morph transitions</span>
-      </div>
+      <h2 class="box-heading">Field Notes</h2>
     </div>
 
     <div class="mira-cells" data-cols="3">
@@ -60,17 +45,16 @@ description: "An editorial exploration of canopy geometry, fluvial hydrology, an
           <span class="meta-dot">&middot;</span>
           <span>4 min read</span>
         </div>
-        <h2 class="cell-title">
+        <h3 class="cell-title">
           <a href="/posts/crown-shyness-and-canopy-geometry/" class="cell-link" mira-morph="post-crown-shyness-and-canopy-geometry">
             Crown Shyness and Canopy Geometry
           </a>
-        </h2>
+        </h3>
         <p class="cell-desc">
           How mature forest canopies maintain deliberate interstitial channels between ten and fifty centimeters wide to optimize light interception and resist disease transmission.
         </p>
         <div class="cell-footer">
-          <span class="mira-chip">Forestry</span>
-          <span class="cell-arrow" aria-hidden="true">&rarr;</span>
+          <a href="/posts/crown-shyness-and-canopy-geometry/" class="cell-link-cta">Read note &rarr;</a>
         </div>
       </article>
 
@@ -83,17 +67,16 @@ description: "An editorial exploration of canopy geometry, fluvial hydrology, an
           <span class="meta-dot">&middot;</span>
           <span>5 min read</span>
         </div>
-        <h2 class="cell-title">
+        <h3 class="cell-title">
           <a href="/posts/dendritic-drainage-and-fluvial-hydrology/" class="cell-link" mira-morph="post-dendritic-drainage-and-fluvial-hydrology">
             Dendritic Drainage and Fluvial Hydrology
           </a>
-        </h2>
+        </h3>
         <p class="cell-desc">
           Channel network bifurcation, Horton-Strahler ordering, and minimum energy expenditure across fluvial sediment basins.
         </p>
         <div class="cell-footer">
-          <span class="mira-chip">Hydrology</span>
-          <span class="cell-arrow" aria-hidden="true">&rarr;</span>
+          <a href="/posts/dendritic-drainage-and-fluvial-hydrology/" class="cell-link-cta">Read note &rarr;</a>
         </div>
       </article>
 
@@ -106,76 +89,18 @@ description: "An editorial exploration of canopy geometry, fluvial hydrology, an
           <span class="meta-dot">&middot;</span>
           <span>6 min read</span>
         </div>
-        <h2 class="cell-title">
+        <h3 class="cell-title">
           <a href="/posts/alpine-stratigraphy-and-compression-faults/" class="cell-link" mira-morph="post-alpine-stratigraphy-and-compression-faults">
             Alpine Stratigraphy and Compression Faults
           </a>
-        </h2>
+        </h3>
         <p class="cell-desc">
           Orogenic thrust sheets, nappe geometries, and ductile micro-folding across high-elevation limestone massifs.
         </p>
         <div class="cell-footer">
-          <span class="mira-chip">Stratigraphy</span>
-          <span class="cell-arrow" aria-hidden="true">&rarr;</span>
+          <a href="/posts/alpine-stratigraphy-and-compression-faults/" class="cell-link-cta">Read note &rarr;</a>
         </div>
       </article>
-    </div>
-  </div>
-</section>
-
-<section class="mira-section" aria-label="Framework Principles">
-  <div class="mira-box">
-    <i></i><i></i><i></i><i></i>
-    <div class="mira-box__header">
-      <div class="header-split">
-        <div class="mira-eyebrow">
-          <span>Engine Architecture</span>
-          <span>&middot;</span>
-          <span>Why Mira Builds Fast</span>
-        </div>
-        <span class="collection-note">Zero client hydration &middot; Rust compiler</span>
-      </div>
-    </div>
-
-    <div class="mira-cells" data-cols="3">
-      <div class="mira-cell">
-        <div class="cell-icon-wrap">
-          <svg class="mira-pxi" data-tone="haze" viewBox="0 0 118 118" width="36" height="36" aria-hidden="true"><rect x="0" y="0" width="8" height="8" rx="1.5"/><rect x="10" y="0" width="8" height="8" rx="1.5"/><rect x="20" y="0" width="8" height="8" rx="1.5"/><rect x="30" y="0" width="8" height="8" rx="1.5"/><rect x="40" y="0" width="8" height="8" rx="1.5"/><rect x="50" y="0" width="8" height="8" rx="1.5"/><rect x="60" y="0" width="8" height="8" rx="1.5"/><rect x="70" y="0" width="8" height="8" rx="1.5"/><rect x="80" y="0" width="8" height="8" rx="1.5"/><rect x="90" y="0" width="8" height="8" rx="1.5"/><rect x="100" y="0" width="8" height="8" rx="1.5"/><rect x="110" y="0" width="8" height="8" rx="1.5"/><rect x="0" y="10" width="8" height="8" rx="1.5"/><rect class="on" x="10" y="10" width="8" height="8" rx="1.5"/><rect class="on" x="20" y="10" width="8" height="8" rx="1.5"/><rect class="on" x="30" y="10" width="8" height="8" rx="1.5"/><rect class="on" x="40" y="10" width="8" height="8" rx="1.5"/><rect class="on" x="50" y="10" width="8" height="8" rx="1.5"/><rect class="on" x="60" y="10" width="8" height="8" rx="1.5"/><rect class="on" x="70" y="10" width="8" height="8" rx="1.5"/><rect class="on" x="80" y="10" width="8" height="8" rx="1.5"/><rect class="on" x="90" y="10" width="8" height="8" rx="1.5"/><rect class="on" x="100" y="10" width="8" height="8" rx="1.5"/><rect x="110" y="10" width="8" height="8" rx="1.5"/><rect x="0" y="20" width="8" height="8" rx="1.5"/><rect class="on" x="10" y="20" width="8" height="8" rx="1.5"/><rect x="20" y="20" width="8" height="8" rx="1.5"/><rect x="30" y="20" width="8" height="8" rx="1.5"/><rect x="40" y="20" width="8" height="8" rx="1.5"/><rect x="50" y="20" width="8" height="8" rx="1.5"/><rect x="60" y="20" width="8" height="8" rx="1.5"/><rect x="70" y="20" width="8" height="8" rx="1.5"/><rect x="80" y="20" width="8" height="8" rx="1.5"/><rect x="90" y="20" width="8" height="8" rx="1.5"/><rect class="on" x="100" y="20" width="8" height="8" rx="1.5"/><rect x="110" y="20" width="8" height="8" rx="1.5"/><rect x="0" y="30" width="8" height="8" rx="1.5"/><rect class="on" x="10" y="30" width="8" height="8" rx="1.5"/><rect x="20" y="30" width="8" height="8" rx="1.5"/><rect x="30" y="30" width="8" height="8" rx="1.5"/><rect x="40" y="30" width="8" height="8" rx="1.5"/><rect x="50" y="30" width="8" height="8" rx="1.5"/><rect x="60" y="30" width="8" height="8" rx="1.5"/><rect x="70" y="30" width="8" height="8" rx="1.5"/><rect x="80" y="30" width="8" height="8" rx="1.5"/><rect x="90" y="30" width="8" height="8" rx="1.5"/><rect class="on" x="100" y="30" width="8" height="8" rx="1.5"/><rect x="110" y="30" width="8" height="8" rx="1.5"/><rect x="0" y="40" width="8" height="8" rx="1.5"/><rect class="on" x="10" y="40" width="8" height="8" rx="1.5"/><rect x="20" y="40" width="8" height="8" rx="1.5"/><rect x="30" y="40" width="8" height="8" rx="1.5"/><rect x="40" y="40" width="8" height="8" rx="1.5"/><rect x="50" y="40" width="8" height="8" rx="1.5"/><rect x="60" y="40" width="8" height="8" rx="1.5"/><rect x="70" y="40" width="8" height="8" rx="1.5"/><rect x="80" y="40" width="8" height="8" rx="1.5"/><rect x="90" y="40" width="8" height="8" rx="1.5"/><rect class="on" x="100" y="40" width="8" height="8" rx="1.5"/><rect x="110" y="40" width="8" height="8" rx="1.5"/><rect x="0" y="50" width="8" height="8" rx="1.5"/><rect class="on" x="10" y="50" width="8" height="8" rx="1.5"/><rect x="20" y="50" width="8" height="8" rx="1.5"/><rect x="30" y="50" width="8" height="8" rx="1.5"/><rect x="40" y="50" width="8" height="8" rx="1.5"/><rect x="50" y="50" width="8" height="8" rx="1.5"/><rect x="60" y="50" width="8" height="8" rx="1.5"/><rect x="70" y="50" width="8" height="8" rx="1.5"/><rect x="80" y="50" width="8" height="8" rx="1.5"/><rect x="90" y="50" width="8" height="8" rx="1.5"/><rect class="on" x="100" y="50" width="8" height="8" rx="1.5"/><rect x="110" y="50" width="8" height="8" rx="1.5"/><rect x="0" y="60" width="8" height="8" rx="1.5"/><rect x="10" y="60" width="8" height="8" rx="1.5"/><rect class="on" x="20" y="60" width="8" height="8" rx="1.5"/><rect x="30" y="60" width="8" height="8" rx="1.5"/><rect x="40" y="60" width="8" height="8" rx="1.5"/><rect x="50" y="60" width="8" height="8" rx="1.5"/><rect x="60" y="60" width="8" height="8" rx="1.5"/><rect x="70" y="60" width="8" height="8" rx="1.5"/><rect x="80" y="60" width="8" height="8" rx="1.5"/><rect class="on" x="90" y="60" width="8" height="8" rx="1.5"/><rect x="100" y="60" width="8" height="8" rx="1.5"/><rect x="110" y="60" width="8" height="8" rx="1.5"/><rect x="0" y="70" width="8" height="8" rx="1.5"/><rect x="10" y="70" width="8" height="8" rx="1.5"/><rect class="on" x="20" y="70" width="8" height="8" rx="1.5"/><rect x="30" y="70" width="8" height="8" rx="1.5"/><rect x="40" y="70" width="8" height="8" rx="1.5"/><rect x="50" y="70" width="8" height="8" rx="1.5"/><rect x="60" y="70" width="8" height="8" rx="1.5"/><rect x="70" y="70" width="8" height="8" rx="1.5"/><rect x="80" y="70" width="8" height="8" rx="1.5"/><rect class="on" x="90" y="70" width="8" height="8" rx="1.5"/><rect x="100" y="70" width="8" height="8" rx="1.5"/><rect x="110" y="70" width="8" height="8" rx="1.5"/><rect x="0" y="80" width="8" height="8" rx="1.5"/><rect x="10" y="80" width="8" height="8" rx="1.5"/><rect x="20" y="80" width="8" height="8" rx="1.5"/><rect class="on" x="30" y="80" width="8" height="8" rx="1.5"/><rect x="40" y="80" width="8" height="8" rx="1.5"/><rect x="50" y="80" width="8" height="8" rx="1.5"/><rect x="60" y="80" width="8" height="8" rx="1.5"/><rect x="70" y="80" width="8" height="8" rx="1.5"/><rect class="on" x="80" y="80" width="8" height="8" rx="1.5"/><rect x="90" y="80" width="8" height="8" rx="1.5"/><rect x="100" y="80" width="8" height="8" rx="1.5"/><rect x="110" y="80" width="8" height="8" rx="1.5"/><rect x="0" y="90" width="8" height="8" rx="1.5"/><rect x="10" y="90" width="8" height="8" rx="1.5"/><rect x="20" y="90" width="8" height="8" rx="1.5"/><rect x="30" y="90" width="8" height="8" rx="1.5"/><rect class="on" x="40" y="90" width="8" height="8" rx="1.5"/><rect x="50" y="90" width="8" height="8" rx="1.5"/><rect x="60" y="90" width="8" height="8" rx="1.5"/><rect class="on" x="70" y="90" width="8" height="8" rx="1.5"/><rect x="80" y="90" width="8" height="8" rx="1.5"/><rect x="90" y="90" width="8" height="8" rx="1.5"/><rect x="100" y="90" width="8" height="8" rx="1.5"/><rect x="110" y="90" width="8" height="8" rx="1.5"/><rect x="0" y="100" width="8" height="8" rx="1.5"/><rect x="10" y="100" width="8" height="8" rx="1.5"/><rect x="20" y="100" width="8" height="8" rx="1.5"/><rect x="30" y="100" width="8" height="8" rx="1.5"/><rect x="40" y="100" width="8" height="8" rx="1.5"/><rect class="on" x="50" y="100" width="8" height="8" rx="1.5"/><rect class="on" x="60" y="100" width="8" height="8" rx="1.5"/><rect x="70" y="100" width="8" height="8" rx="1.5"/><rect x="80" y="100" width="8" height="8" rx="1.5"/><rect x="90" y="100" width="8" height="8" rx="1.5"/><rect x="100" y="100" width="8" height="8" rx="1.5"/><rect x="110" y="100" width="8" height="8" rx="1.5"/><rect x="0" y="110" width="8" height="8" rx="1.5"/><rect x="10" y="110" width="8" height="8" rx="1.5"/><rect x="20" y="110" width="8" height="8" rx="1.5"/><rect x="30" y="110" width="8" height="8" rx="1.5"/><rect x="40" y="110" width="8" height="8" rx="1.5"/><rect x="50" y="110" width="8" height="8" rx="1.5"/><rect x="60" y="110" width="8" height="8" rx="1.5"/><rect x="70" y="110" width="8" height="8" rx="1.5"/><rect x="80" y="110" width="8" height="8" rx="1.5"/><rect x="90" y="110" width="8" height="8" rx="1.5"/><rect x="100" y="110" width="8" height="8" rx="1.5"/><rect x="110" y="110" width="8" height="8" rx="1.5"/></svg>
-        </div>
-        <h3 class="cell-title">Zero Runtime Hydration</h3>
-        <p class="cell-desc">
-          Pages ship zero kilobytes of JavaScript framework overhead. All layout, styling, and content render cleanly at build time into pure static HTML.
-        </p>
-        <div class="cell-footer">
-          <span class="mira-chip">0KB JS</span>
-        </div>
-      </div>
-
-      <div class="mira-cell">
-        <div class="cell-icon-wrap">
-          <svg class="mira-pxi" data-tone="peach" viewBox="0 0 118 118" width="36" height="36" aria-hidden="true"><rect x="0" y="0" width="8" height="8" rx="1.5"/><rect x="10" y="0" width="8" height="8" rx="1.5"/><rect x="20" y="0" width="8" height="8" rx="1.5"/><rect x="30" y="0" width="8" height="8" rx="1.5"/><rect x="40" y="0" width="8" height="8" rx="1.5"/><rect x="50" y="0" width="8" height="8" rx="1.5"/><rect x="60" y="0" width="8" height="8" rx="1.5"/><rect x="70" y="0" width="8" height="8" rx="1.5"/><rect x="80" y="0" width="8" height="8" rx="1.5"/><rect x="90" y="0" width="8" height="8" rx="1.5"/><rect x="100" y="0" width="8" height="8" rx="1.5"/><rect x="110" y="0" width="8" height="8" rx="1.5"/><rect x="0" y="10" width="8" height="8" rx="1.5"/><rect x="10" y="10" width="8" height="8" rx="1.5"/><rect class="on" x="20" y="10" width="8" height="8" rx="1.5"/><rect class="on" x="30" y="10" width="8" height="8" rx="1.5"/><rect class="on" x="40" y="10" width="8" height="8" rx="1.5"/><rect class="on" x="50" y="10" width="8" height="8" rx="1.5"/><rect class="on" x="60" y="10" width="8" height="8" rx="1.5"/><rect class="on" x="70" y="10" width="8" height="8" rx="1.5"/><rect class="on" x="80" y="10" width="8" height="8" rx="1.5"/><rect class="on" x="90" y="10" width="8" height="8" rx="1.5"/><rect x="100" y="10" width="8" height="8" rx="1.5"/><rect x="110" y="10" width="8" height="8" rx="1.5"/><rect x="0" y="20" width="8" height="8" rx="1.5"/><rect x="10" y="20" width="8" height="8" rx="1.5"/><rect class="on" x="20" y="20" width="8" height="8" rx="1.5"/><rect x="30" y="20" width="8" height="8" rx="1.5"/><rect x="40" y="20" width="8" height="8" rx="1.5"/><rect x="50" y="20" width="8" height="8" rx="1.5"/><rect x="60" y="20" width="8" height="8" rx="1.5"/><rect x="70" y="20" width="8" height="8" rx="1.5"/><rect x="80" y="20" width="8" height="8" rx="1.5"/><rect class="on" x="90" y="20" width="8" height="8" rx="1.5"/><rect x="100" y="20" width="8" height="8" rx="1.5"/><rect x="110" y="20" width="8" height="8" rx="1.5"/><rect x="0" y="30" width="8" height="8" rx="1.5"/><rect x="10" y="30" width="8" height="8" rx="1.5"/><rect class="on" x="20" y="30" width="8" height="8" rx="1.5"/><rect x="30" y="30" width="8" height="8" rx="1.5"/><rect class="on" x="40" y="30" width="8" height="8" rx="1.5"/><rect class="on" x="50" y="30" width="8" height="8" rx="1.5"/><rect class="on" x="60" y="30" width="8" height="8" rx="1.5"/><rect class="on" x="70" y="30" width="8" height="8" rx="1.5"/><rect x="80" y="30" width="8" height="8" rx="1.5"/><rect class="on" x="90" y="30" width="8" height="8" rx="1.5"/><rect x="100" y="30" width="8" height="8" rx="1.5"/><rect x="110" y="30" width="8" height="8" rx="1.5"/><rect x="0" y="40" width="8" height="8" rx="1.5"/><rect x="10" y="40" width="8" height="8" rx="1.5"/><rect class="on" x="20" y="40" width="8" height="8" rx="1.5"/><rect x="30" y="40" width="8" height="8" rx="1.5"/><rect x="40" y="40" width="8" height="8" rx="1.5"/><rect x="50" y="40" width="8" height="8" rx="1.5"/><rect x="60" y="40" width="8" height="8" rx="1.5"/><rect x="70" y="40" width="8" height="8" rx="1.5"/><rect x="80" y="40" width="8" height="8" rx="1.5"/><rect class="on" x="90" y="40" width="8" height="8" rx="1.5"/><rect x="100" y="40" width="8" height="8" rx="1.5"/><rect x="110" y="40" width="8" height="8" rx="1.5"/><rect x="0" y="50" width="8" height="8" rx="1.5"/><rect x="10" y="50" width="8" height="8" rx="1.5"/><rect class="on" x="20" y="50" width="8" height="8" rx="1.5"/><rect x="30" y="50" width="8" height="8" rx="1.5"/><rect class="on" x="40" y="50" width="8" height="8" rx="1.5"/><rect class="on" x="50" y="50" width="8" height="8" rx="1.5"/><rect class="on" x="60" y="50" width="8" height="8" rx="1.5"/><rect class="on" x="70" y="50" width="8" height="8" rx="1.5"/><rect x="80" y="50" width="8" height="8" rx="1.5"/><rect class="on" x="90" y="50" width="8" height="8" rx="1.5"/><rect x="100" y="50" width="8" height="8" rx="1.5"/><rect x="110" y="50" width="8" height="8" rx="1.5"/><rect x="0" y="60" width="8" height="8" rx="1.5"/><rect x="10" y="60" width="8" height="8" rx="1.5"/><rect class="on" x="20" y="60" width="8" height="8" rx="1.5"/><rect x="30" y="60" width="8" height="8" rx="1.5"/><rect x="40" y="60" width="8" height="8" rx="1.5"/><rect x="50" y="60" width="8" height="8" rx="1.5"/><rect x="60" y="60" width="8" height="8" rx="1.5"/><rect x="70" y="60" width="8" height="8" rx="1.5"/><rect x="80" y="60" width="8" height="8" rx="1.5"/><rect class="on" x="90" y="60" width="8" height="8" rx="1.5"/><rect x="100" y="60" width="8" height="8" rx="1.5"/><rect x="110" y="60" width="8" height="8" rx="1.5"/><rect x="0" y="70" width="8" height="8" rx="1.5"/><rect x="10" y="70" width="8" height="8" rx="1.5"/><rect class="on" x="20" y="70" width="8" height="8" rx="1.5"/><rect x="30" y="70" width="8" height="8" rx="1.5"/><rect class="on" x="40" y="70" width="8" height="8" rx="1.5"/><rect class="on" x="50" y="70" width="8" height="8" rx="1.5"/><rect x="60" y="70" width="8" height="8" rx="1.5"/><rect x="70" y="70" width="8" height="8" rx="1.5"/><rect x="80" y="70" width="8" height="8" rx="1.5"/><rect class="on" x="90" y="70" width="8" height="8" rx="1.5"/><rect x="100" y="70" width="8" height="8" rx="1.5"/><rect x="110" y="70" width="8" height="8" rx="1.5"/><rect x="0" y="80" width="8" height="8" rx="1.5"/><rect x="10" y="80" width="8" height="8" rx="1.5"/><rect class="on" x="20" y="80" width="8" height="8" rx="1.5"/><rect x="30" y="80" width="8" height="8" rx="1.5"/><rect x="40" y="80" width="8" height="8" rx="1.5"/><rect x="50" y="80" width="8" height="8" rx="1.5"/><rect x="60" y="80" width="8" height="8" rx="1.5"/><rect x="70" y="80" width="8" height="8" rx="1.5"/><rect x="80" y="80" width="8" height="8" rx="1.5"/><rect class="on" x="90" y="80" width="8" height="8" rx="1.5"/><rect x="100" y="80" width="8" height="8" rx="1.5"/><rect x="110" y="80" width="8" height="8" rx="1.5"/><rect x="0" y="90" width="8" height="8" rx="1.5"/><rect x="10" y="90" width="8" height="8" rx="1.5"/><rect class="on" x="20" y="90" width="8" height="8" rx="1.5"/><rect class="on" x="30" y="90" width="8" height="8" rx="1.5"/><rect class="on" x="40" y="90" width="8" height="8" rx="1.5"/><rect class="on" x="50" y="90" width="8" height="8" rx="1.5"/><rect class="on" x="60" y="90" width="8" height="8" rx="1.5"/><rect class="on" x="70" y="90" width="8" height="8" rx="1.5"/><rect class="on" x="80" y="90" width="8" height="8" rx="1.5"/><rect class="on" x="90" y="90" width="8" height="8" rx="1.5"/><rect x="100" y="90" width="8" height="8" rx="1.5"/><rect x="110" y="90" width="8" height="8" rx="1.5"/><rect x="0" y="100" width="8" height="8" rx="1.5"/><rect x="10" y="100" width="8" height="8" rx="1.5"/><rect x="20" y="100" width="8" height="8" rx="1.5"/><rect x="30" y="100" width="8" height="8" rx="1.5"/><rect x="40" y="100" width="8" height="8" rx="1.5"/><rect x="50" y="100" width="8" height="8" rx="1.5"/><rect x="60" y="100" width="8" height="8" rx="1.5"/><rect x="70" y="100" width="8" height="8" rx="1.5"/><rect x="80" y="100" width="8" height="8" rx="1.5"/><rect x="90" y="100" width="8" height="8" rx="1.5"/><rect x="100" y="100" width="8" height="8" rx="1.5"/><rect x="110" y="100" width="8" height="8" rx="1.5"/><rect x="0" y="110" width="8" height="8" rx="1.5"/><rect x="10" y="110" width="8" height="8" rx="1.5"/><rect x="20" y="110" width="8" height="8" rx="1.5"/><rect x="30" y="110" width="8" height="8" rx="1.5"/><rect x="40" y="110" width="8" height="8" rx="1.5"/><rect x="50" y="110" width="8" height="8" rx="1.5"/><rect x="60" y="110" width="8" height="8" rx="1.5"/><rect x="70" y="110" width="8" height="8" rx="1.5"/><rect x="80" y="110" width="8" height="8" rx="1.5"/><rect x="90" y="110" width="8" height="8" rx="1.5"/><rect x="100" y="110" width="8" height="8" rx="1.5"/><rect x="110" y="110" width="8" height="8" rx="1.5"/></svg>
-        </div>
-        <h3 class="cell-title">Compiler-Checked Collections</h3>
-        <p class="cell-desc">
-          Post frontmatter, dates, and taxonomies are strictly verified against schemas during compilation, preventing broken routes before deployment.
-        </p>
-        <div class="cell-footer">
-          <span class="mira-chip">Strict Validation</span>
-        </div>
-      </div>
-
-      <div class="mira-cell">
-        <div class="cell-icon-wrap">
-          <svg class="mira-pxi" data-tone="lagoon" viewBox="0 0 118 118" width="36" height="36" aria-hidden="true"><rect x="0" y="0" width="8" height="8" rx="1.5"/><rect x="10" y="0" width="8" height="8" rx="1.5"/><rect x="20" y="0" width="8" height="8" rx="1.5"/><rect x="30" y="0" width="8" height="8" rx="1.5"/><rect x="40" y="0" width="8" height="8" rx="1.5"/><rect x="50" y="0" width="8" height="8" rx="1.5"/><rect x="60" y="0" width="8" height="8" rx="1.5"/><rect x="70" y="0" width="8" height="8" rx="1.5"/><rect x="80" y="0" width="8" height="8" rx="1.5"/><rect x="90" y="0" width="8" height="8" rx="1.5"/><rect x="100" y="0" width="8" height="8" rx="1.5"/><rect x="110" y="0" width="8" height="8" rx="1.5"/><rect x="0" y="10" width="8" height="8" rx="1.5"/><rect x="10" y="10" width="8" height="8" rx="1.5"/><rect class="on" x="20" y="10" width="8" height="8" rx="1.5"/><rect class="on" x="30" y="10" width="8" height="8" rx="1.5"/><rect class="on" x="40" y="10" width="8" height="8" rx="1.5"/><rect class="on" x="50" y="10" width="8" height="8" rx="1.5"/><rect class="on" x="60" y="10" width="8" height="8" rx="1.5"/><rect x="70" y="10" width="8" height="8" rx="1.5"/><rect x="80" y="10" width="8" height="8" rx="1.5"/><rect x="90" y="10" width="8" height="8" rx="1.5"/><rect x="100" y="10" width="8" height="8" rx="1.5"/><rect x="110" y="10" width="8" height="8" rx="1.5"/><rect x="0" y="20" width="8" height="8" rx="1.5"/><rect class="on" x="10" y="20" width="8" height="8" rx="1.5"/><rect x="20" y="20" width="8" height="8" rx="1.5"/><rect x="30" y="20" width="8" height="8" rx="1.5"/><rect x="40" y="20" width="8" height="8" rx="1.5"/><rect x="50" y="20" width="8" height="8" rx="1.5"/><rect x="60" y="20" width="8" height="8" rx="1.5"/><rect class="on" x="70" y="20" width="8" height="8" rx="1.5"/><rect x="80" y="20" width="8" height="8" rx="1.5"/><rect x="90" y="20" width="8" height="8" rx="1.5"/><rect x="100" y="20" width="8" height="8" rx="1.5"/><rect x="110" y="20" width="8" height="8" rx="1.5"/><rect class="on" x="0" y="30" width="8" height="8" rx="1.5"/><rect x="10" y="30" width="8" height="8" rx="1.5"/><rect x="20" y="30" width="8" height="8" rx="1.5"/><rect x="30" y="30" width="8" height="8" rx="1.5"/><rect x="40" y="30" width="8" height="8" rx="1.5"/><rect x="50" y="30" width="8" height="8" rx="1.5"/><rect x="60" y="30" width="8" height="8" rx="1.5"/><rect x="70" y="30" width="8" height="8" rx="1.5"/><rect class="on" x="80" y="30" width="8" height="8" rx="1.5"/><rect x="90" y="30" width="8" height="8" rx="1.5"/><rect x="100" y="30" width="8" height="8" rx="1.5"/><rect x="110" y="30" width="8" height="8" rx="1.5"/><rect class="on" x="0" y="40" width="8" height="8" rx="1.5"/><rect x="10" y="40" width="8" height="8" rx="1.5"/><rect x="20" y="40" width="8" height="8" rx="1.5"/><rect x="30" y="40" width="8" height="8" rx="1.5"/><rect x="40" y="40" width="8" height="8" rx="1.5"/><rect x="50" y="40" width="8" height="8" rx="1.5"/><rect x="60" y="40" width="8" height="8" rx="1.5"/><rect x="70" y="40" width="8" height="8" rx="1.5"/><rect class="on" x="80" y="40" width="8" height="8" rx="1.5"/><rect x="90" y="40" width="8" height="8" rx="1.5"/><rect x="100" y="40" width="8" height="8" rx="1.5"/><rect x="110" y="40" width="8" height="8" rx="1.5"/><rect class="on" x="0" y="50" width="8" height="8" rx="1.5"/><rect x="10" y="50" width="8" height="8" rx="1.5"/><rect x="20" y="50" width="8" height="8" rx="1.5"/><rect x="30" y="50" width="8" height="8" rx="1.5"/><rect x="40" y="50" width="8" height="8" rx="1.5"/><rect x="50" y="50" width="8" height="8" rx="1.5"/><rect x="60" y="50" width="8" height="8" rx="1.5"/><rect x="70" y="50" width="8" height="8" rx="1.5"/><rect class="on" x="80" y="50" width="8" height="8" rx="1.5"/><rect x="90" y="50" width="8" height="8" rx="1.5"/><rect x="100" y="50" width="8" height="8" rx="1.5"/><rect x="110" y="50" width="8" height="8" rx="1.5"/><rect x="0" y="60" width="8" height="8" rx="1.5"/><rect class="on" x="10" y="60" width="8" height="8" rx="1.5"/><rect x="20" y="60" width="8" height="8" rx="1.5"/><rect x="30" y="60" width="8" height="8" rx="1.5"/><rect x="40" y="60" width="8" height="8" rx="1.5"/><rect x="50" y="60" width="8" height="8" rx="1.5"/><rect x="60" y="60" width="8" height="8" rx="1.5"/><rect class="on" x="70" y="60" width="8" height="8" rx="1.5"/><rect x="80" y="60" width="8" height="8" rx="1.5"/><rect x="90" y="60" width="8" height="8" rx="1.5"/><rect x="100" y="60" width="8" height="8" rx="1.5"/><rect x="110" y="60" width="8" height="8" rx="1.5"/><rect x="0" y="70" width="8" height="8" rx="1.5"/><rect x="10" y="70" width="8" height="8" rx="1.5"/><rect class="on" x="20" y="70" width="8" height="8" rx="1.5"/><rect class="on" x="30" y="70" width="8" height="8" rx="1.5"/><rect class="on" x="40" y="70" width="8" height="8" rx="1.5"/><rect class="on" x="50" y="70" width="8" height="8" rx="1.5"/><rect class="on" x="60" y="70" width="8" height="8" rx="1.5"/><rect x="70" y="70" width="8" height="8" rx="1.5"/><rect class="on" x="80" y="70" width="8" height="8" rx="1.5"/><rect x="90" y="70" width="8" height="8" rx="1.5"/><rect x="100" y="70" width="8" height="8" rx="1.5"/><rect x="110" y="70" width="8" height="8" rx="1.5"/><rect x="0" y="80" width="8" height="8" rx="1.5"/><rect x="10" y="80" width="8" height="8" rx="1.5"/><rect x="20" y="80" width="8" height="8" rx="1.5"/><rect x="30" y="80" width="8" height="8" rx="1.5"/><rect x="40" y="80" width="8" height="8" rx="1.5"/><rect x="50" y="80" width="8" height="8" rx="1.5"/><rect x="60" y="80" width="8" height="8" rx="1.5"/><rect class="on" x="70" y="80" width="8" height="8" rx="1.5"/><rect x="80" y="80" width="8" height="8" rx="1.5"/><rect class="on" x="90" y="80" width="8" height="8" rx="1.5"/><rect x="100" y="80" width="8" height="8" rx="1.5"/><rect x="110" y="80" width="8" height="8" rx="1.5"/><rect x="0" y="90" width="8" height="8" rx="1.5"/><rect x="10" y="90" width="8" height="8" rx="1.5"/><rect x="20" y="90" width="8" height="8" rx="1.5"/><rect x="30" y="90" width="8" height="8" rx="1.5"/><rect x="40" y="90" width="8" height="8" rx="1.5"/><rect x="50" y="90" width="8" height="8" rx="1.5"/><rect x="60" y="90" width="8" height="8" rx="1.5"/><rect x="70" y="90" width="8" height="8" rx="1.5"/><rect class="on" x="80" y="90" width="8" height="8" rx="1.5"/><rect x="90" y="90" width="8" height="8" rx="1.5"/><rect class="on" x="100" y="90" width="8" height="8" rx="1.5"/><rect x="110" y="90" width="8" height="8" rx="1.5"/><rect x="0" y="100" width="8" height="8" rx="1.5"/><rect x="10" y="100" width="8" height="8" rx="1.5"/><rect x="20" y="100" width="8" height="8" rx="1.5"/><rect x="30" y="100" width="8" height="8" rx="1.5"/><rect x="40" y="100" width="8" height="8" rx="1.5"/><rect x="50" y="100" width="8" height="8" rx="1.5"/><rect x="60" y="100" width="8" height="8" rx="1.5"/><rect x="70" y="100" width="8" height="8" rx="1.5"/><rect x="80" y="100" width="8" height="8" rx="1.5"/><rect class="on" x="90" y="100" width="8" height="8" rx="1.5"/><rect class="on" x="100" y="100" width="8" height="8" rx="1.5"/><rect x="110" y="100" width="8" height="8" rx="1.5"/><rect x="0" y="110" width="8" height="8" rx="1.5"/><rect x="10" y="110" width="8" height="8" rx="1.5"/><rect x="20" y="110" width="8" height="8" rx="1.5"/><rect x="30" y="110" width="8" height="8" rx="1.5"/><rect x="40" y="110" width="8" height="8" rx="1.5"/><rect x="50" y="110" width="8" height="8" rx="1.5"/><rect x="60" y="110" width="8" height="8" rx="1.5"/><rect x="70" y="110" width="8" height="8" rx="1.5"/><rect x="80" y="110" width="8" height="8" rx="1.5"/><rect x="90" y="110" width="8" height="8" rx="1.5"/><rect x="100" y="110" width="8" height="8" rx="1.5"/><rect x="110" y="110" width="8" height="8" rx="1.5"/></svg>
-        </div>
-        <h3 class="cell-title">Dual Human &amp; Agent Surfaces</h3>
-        <p class="cell-desc">
-          Every route produces clean twin Markdown files, machine-readable search indexes, and structured llms.txt discovery out of the box.
-        </p>
-        <div class="cell-footer">
-          <span class="mira-chip">llms.txt Included</span>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -228,36 +153,11 @@ description: "An editorial exploration of canopy geometry, fluvial hydrology, an
 
 .mira-atmo__body {
   position: relative;
-  padding: var(--space-8) var(--space-8);
+  padding: var(--space-12) var(--space-8);
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
   color: var(--on-warm);
-}
-
-.hero-top-meta {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: var(--space-2);
-}
-
-.hero-top-meta .mira-eyebrow {
-  color: rgba(11, 11, 13, 0.75);
-}
-
-.preview-badge {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  padding: 4px 10px;
-  border-radius: var(--radius-pill);
-  background: rgba(11, 11, 13, 0.12);
-  color: var(--on-warm);
-  border: 1px solid rgba(11, 11, 13, 0.15);
 }
 
 .hero-title {
@@ -275,7 +175,7 @@ description: "An editorial exploration of canopy geometry, fluvial hydrology, an
   font-family: var(--font-text);
   font-size: 1.0625rem;
   line-height: 1.55;
-  color: rgba(11, 11, 13, 0.85);
+  color: rgba(11, 11, 13, 0.88);
   max-width: 38rem;
   margin: 0;
   text-wrap: pretty;
@@ -289,18 +189,6 @@ description: "An editorial exploration of canopy geometry, fluvial hydrology, an
   flex-wrap: wrap;
 }
 
-.external-chip {
-  text-decoration: none;
-  background: rgba(11, 11, 13, 0.15);
-  border-color: rgba(11, 11, 13, 0.2);
-  color: var(--on-warm);
-  transition: background 0.15s ease;
-}
-
-.external-chip:hover {
-  background: rgba(11, 11, 13, 0.25);
-}
-
 .mira-section {
   margin-top: var(--space-8);
 }
@@ -311,18 +199,13 @@ description: "An editorial exploration of canopy geometry, fluvial hydrology, an
   background: var(--surface-1);
 }
 
-.header-split {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: var(--space-2);
-}
-
-.collection-note {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  color: var(--ink-faint);
+.box-heading {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin: 0;
 }
 
 .cell-icon-wrap {
@@ -380,26 +263,33 @@ description: "An editorial exploration of canopy geometry, fluvial hydrology, an
 .cell-footer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   margin-top: auto;
-  padding-top: var(--space-3);
+  padding-top: var(--space-4);
 }
 
-.cell-arrow {
+.cell-link-cta {
   font-family: var(--font-mono);
-  font-size: 14px;
+  font-size: 13px;
   color: var(--ink-faint);
-  transition: transform 0.15s ease, color 0.15s ease;
+  text-decoration: none;
+  transition: color 0.15s ease, transform 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
 }
 
-.mira-cell:hover .cell-arrow {
-  transform: translateX(3px);
+.cell-link-cta:hover {
+  color: var(--ember);
+  transform: translateX(2px);
+}
+
+.mira-cell:hover .cell-link-cta {
   color: var(--ember);
 }
 
 @media (max-width: 640px) {
   .mira-atmo__body {
-    padding: var(--space-6) var(--space-4);
+    padding: var(--space-8) var(--space-4);
   }
   .mira-box__header {
     padding: var(--space-3) var(--space-4);
